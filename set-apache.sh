@@ -23,6 +23,16 @@ mkdir /etc/apache2/ssl
 openssl dhparam -out /etc/apache2/ssl/dhparams512.pem 512
 cp files/ssl.conf /etc/apache2/mods-enabled/ssl.conf
 
+apt-get install php libapache2-mod-php
+
+# ====================
+echo 'Set SSL to vulnerable setting ok'
+echo 'Now copy website'
+# ====================
+
+cp www/* /var/www/html/
+rm /var/www/html/index.html
 
 service apache2 restart
 
+echo 'done'

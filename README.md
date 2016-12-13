@@ -9,7 +9,8 @@ NTU NS 2016 final project. Perform a Man in the Middle attack to a old Apache ht
 ## Progess
 
 - [X] install apache httpd
-- [ ] configure ssl setting
+- [X] configure ssl setting
+- [X] set up sample site
 - [ ] logjam to apache
 
 ## Usage

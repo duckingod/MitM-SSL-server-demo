@@ -16,6 +16,8 @@ NTU NS 2016 final project. Perform a Man in the Middle attack to a old Apache ht
 
     sudo ./run.sh
 
+ This will REMOVE OLD *apache2* and */var/www/html*
+
  - To download a vulnerable browser: check [browser history wiki]. 
  - [vulnerable opera windows]
  - [vulnerable opera osx]

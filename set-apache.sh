@@ -6,9 +6,10 @@ apt-get install openssl
 
 a2enmod ssl
 
-rm /etc/apache2/sites-enabled/000-default.conf
+# rm /etc/apache2/sites-enabled/000-default.conf
 # ln -s ../default.ssl.conf /etc/apache2/sites-enabled/ssl.conf
 cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/ssl.conf
+cp files/virtualhost.conf /etc/apache2/sites-enabled/virtualhost.conf
 
 # service apache2 restart
 

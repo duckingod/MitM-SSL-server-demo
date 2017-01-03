@@ -6,6 +6,12 @@ NTU NS 2016 final project. Perform a Man in the Middle attack to a old Apache ht
  - VM disk size > 4GB
 - apache2 2.4.18
 
+        sudo apt-get -y install python-software-properties && \
+        sudo apt-get -y install software-properties-common && \
+        sudo apt-get -y install gcc make build-essential libssl-dev libffi-dev python-dev
+
+
+
 ## Progess
 
 - [X] install apache httpd
@@ -39,7 +45,10 @@ NTU NS 2016 final project. Perform a Man in the Middle attack to a old Apache ht
  - Configure Apache in an inversed way mentioned in this [article](http://serverfault.com/questions/693241/how-to-fix-logjam-vulnerability-in-apache-httpd)
  - produce vulnerable Diffie-Hellman parameter by `sudo openssl dhparam -out /etc/apache2/dhparams512.pem 512`
  - Change CipherSuites in ClientHello (handshake) ([by this](http://blog.fourthbit.com/2014/12/23/traffic-analysis-of-an-ssl-slash-tls-session)) to DHE\_EXPORT
+ - Do MitM attack by [this repo](https://github.com/allfro/pymiproxy)
 
+## Notes
+ - [Cipher Suites List](http://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml)
 
 [logjam]: https://weakdh.org/logjam.html "Logjam"
 [browser history wiki]: https://en.wikipedia.org/wiki/Template:TLS/SSL_support_history_of_web_browsers "browser history"
